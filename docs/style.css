@@ -1,0 +1,99 @@
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+body .container .background {
+  background-color: #3faf82;
+  width: 400px;
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .background .menu-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+body .container .background .menu-icon:hover {
+  cursor: pointer;
+}
+
+body .container .background .menu-icon span {
+  width: 100px;
+  margin: 7px auto;
+  height: 10px;
+  border-radius: 25px;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+body .container .background .active span:first-child {
+  -webkit-transform: translateY(24px) rotate(45deg);
+          transform: translateY(24px) rotate(45deg);
+}
+
+body .container .background .active span:nth-child(2) {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+body .container .background .active span:last-child {
+  -webkit-transform: translateY(-24px) rotate(-45deg);
+          transform: translateY(-24px) rotate(-45deg);
+}
+
+@media only screen and (max-width: 768px) {
+  .background {
+    min-width: 800px;
+    min-height: 800px;
+  }
+  .background .menu-icon span {
+    min-width: 200px;
+    min-height: 20px;
+    margin: 12px !important;
+  }
+  .background .active span:first-child {
+    -webkit-transform: translateY(43px) rotate(45deg) !important;
+            transform: translateY(43px) rotate(45deg) !important;
+  }
+  .background .active span:nth-child(2) {
+    -webkit-transform: scale(0) !important;
+            transform: scale(0) !important;
+  }
+  .background .active span:last-child {
+    -webkit-transform: translateY(-43px) rotate(-45deg) !important;
+            transform: translateY(-43px) rotate(-45deg) !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
